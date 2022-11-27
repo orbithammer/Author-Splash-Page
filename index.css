@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: whitesmoke;
+    color: #404040;
+}
+
+/* typography */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-shadow: 0 0 5px #FF4500;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin: 0.167em 0;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.35;
+}
+
+.top-text, .beta-text {
+    color: #FFC55C;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+}
+
+.top-text, .beta-text, .subheading {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.top-text {
+    border-top: 5px solid;
+    margin: 0 auto;
+}
+
+.beta-text {
+    border-bottom: 5px solid;
+    margin: 0 auto;
+    /* padding: 0; */
+}
+
+strong {
+    text-decoration: underline;
+}
+
+/* flex containers */
+
+.intro, .main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+}
+
+/* intro */
+
+.intro {
+    justify-content: space-between;
+    min-height: 250px;
+    text-align: center;
+    color: whitesmoke;
+    background: whitesmoke url("images/intro.jpg");
+    background-size: cover;
+}
+
+/* main content */
+
+.main-content {
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.main-content p, form {
+    max-width: 450px;
+}
+
+.subheading {
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+/* form */
+
+input, button {
+    font-family: inherit;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input {
+    padding: 0.5em;
+    margin-bottom: 0.75em;
+    border: 2px solid #d1d5db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8a71ec;
+    background-color: #e6e8ec;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    border: none;
+    cursor: pointer;
+    background-color: #FFC55C;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #ffdc9c;
+}
+
+.fine-print {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: #858585;
+}
+
+/* media queries */
+
+@media (min-width: 576px) {
+    body {
+        display: flex;
+    }
+    
+    h1 {
+        font-size: 5vw;
+    }
+    
+    h2 {
+        font-size: 2.625rem;
+    }
+    
+    .beta-text {
+        font-size: 1.25rem;
+    }
+    
+    .intro, .main-content {
+        width: 50%;
+    }
+    
+    .intro {
+        min-height: 100vh;
+    }
+    
+    .main-content {
+        justify-content: center;
+        padding-top: 0;
+    }
+}
